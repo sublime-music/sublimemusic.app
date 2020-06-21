@@ -1,0 +1,17 @@
+image: python:3.8
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+# Deploy documenation and code coverage to GitLab Pages
+pages:
+  only:
+    - master
+  stage: deploy
+  before_script:
+    - pip install htmlmin
+  script:
+    - make
+  artifacts:
+    paths:
+      - public
