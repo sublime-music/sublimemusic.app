@@ -43,9 +43,15 @@ header {
   z-index: 3;
   background: $header-color;
   box-shadow: 0 3px 5px darken($header-color, 20%);
-  max-height: $header-height;
+  height: $header-height;
   position: sticky;
   top: 0;
+
+  .content-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 
   .logo {
     margin: 17px 0 18px 0;
@@ -53,25 +59,20 @@ header {
   }
 
   nav {
-    float: right;
+    align-items: center;
+    display: flex;
     font-size: 1.1em;
     letter-spacing: 1.4px;
-    line-height: $header-height;
+
+    > * {
+      margin-left: 15px;
+    }
 
     a {
       color: $foreground-color;
 
       &:hover, &:active {
         color: black;
-      }
-    }
-
-    ul {
-      margin: 0;
-
-      li {
-        display: inline-block;
-        margin-left: 10px;
       }
     }
 
@@ -83,6 +84,32 @@ header {
         height: 40px;
         letter-spacing: 1px;
         line-height: 40px;
+      }
+    }
+
+    .github-icon {
+      font-size: 1.4em;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    height: $header-height + 40px;
+
+    .content-wrapper {
+      flex-direction: column;
+    }
+
+    nav {
+      font-size: 0.9em;
+
+      .install-button {
+        width: 100px;
+
+        a {
+          border-radius: 15px;
+          height: 30px;
+          line-height: 30px;
+        }
       }
     }
   }
