@@ -9,6 +9,9 @@ pages:
     - master
   stage: deploy
   before_script:
+    - apt update
+    - apt install -y nodejs npm
+    - npm install -g sass
     - pip install htmlmin
   script:
     - make
