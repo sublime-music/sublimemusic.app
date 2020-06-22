@@ -33,13 +33,17 @@
   <meta property="og:image" content="/images/sublime-music.png">
 
   <!-- Fonts and Styles -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" />
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,600,700" />
+  <link rel="stylesheet"
+        href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" />
+  <link rel="stylesheet"
+        href="//fonts.googleapis.com/css?family=Roboto:300,400,600,700" />
   <link rel="stylesheet"
         href="//cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
         integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY="
         crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet"
+        type="text/css"
+        href="styles.css">
 
   <title>Sublime Music</title>
 </head>
@@ -51,13 +55,17 @@
 
       <nav>
         <ul>
-          <li>FEATURES</li>
+          <li><a href="#features">FEATURES</a></li>
           <li>
             <div class="install-button">
               <a href="#install">INSTALL</a>
             </div>
           </li>
-          <li><i class="fa fa-gitlab"></i></li>
+          <li>
+            <a href="https://gitlab.com/sublime-music/sublime-music" target="_blank">
+              <i class="fa fa-gitlab"></i>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -70,6 +78,7 @@
         <a href="#install">INSTALL</a>
       </div>
       <img class="hero-image" src="images/albums-tab.png" alt="Albums tab of Sublime Music" />
+      <!-- <p><a href="screenshots.html">View more screenshots.</a></p> -->
     </div>
   </div>
   <div id="features">
@@ -80,8 +89,28 @@
   <div id="install">
     <div class="content">
       <h1>INSTALL</h1>
+
+      <div class="install-boxes">
+        <div>
+          <img src="images/arch-linux.png" alt="Arch Linux logo" />
+          <p>Install <code>sublime-music</code> from the AUR.</p>
+          <pre>yay -S sublime-music</pre>
+        </div>
+
+        <div>
+          <img src="images/debian.png" alt="Arch Linux logo" />
+          <p>
+            Install <code>sublime-music</code> from
+            <a href="https://wiki.debian.org/DebianTesting">Debian Testing</a>.
+          </p>
+          <pre>yay -S sublime-music</pre>
+        </div>
+      </div>
     </div>
   </div>
+  <footer>
+    <p>&copy; 2020 Sumner Evans</p>
+  </footer>
 </body>
 
 </html>

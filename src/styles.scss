@@ -1,18 +1,24 @@
-$foreground-color: #010101;
-$background-color: #eeeeee;
+$foreground-color: #1c1a19;
+$background-color: #dadada;
 $header-color: #2980b9;
 $sublime-orange: #ff6801;
 
 body {
   background-color: $background-color;
-  font-family: "Open Sans";
-  padding: 0;
-  margin: 0;
   color: $foreground-color;
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
 }
 
 a {
+  color: darken($header-color, 15%);
   text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover, &:active {
+    color: darken($header-color, 9%);
+  }
 }
 
 .content {
@@ -21,12 +27,14 @@ a {
   padding: 0 20px;
 }
 
+$header-height: 90px;
+
 header {
-  position: sticky;
-  top: 0;
   background: $header-color;
   box-shadow: 0px 1px 10px darken($header-color, 20%);
-  max-height: 90px;
+  max-height: $header-height;
+  position: sticky;
+  top: 0;
 
   .logo {
     margin: 17px 0 18px 0;
@@ -35,8 +43,21 @@ header {
 
   nav {
     float: right;
+    font-size: 1.1em;
+    letter-spacing: 1.4px;
+    line-height: $header-height;
+
+    a {
+      color: $foreground-color;
+
+      &:hover, &:active {
+        color: black;
+      }
+    }
 
     ul {
+      margin: 0;
+
       li {
         display: inline-block;
         margin-left: 10px;
@@ -48,8 +69,8 @@ header {
 
       a {
         border-radius: 20px;
-        letter-spacing: 1px;
         height: 40px;
+        letter-spacing: 1px;
         line-height: 40px;
       }
     }
@@ -57,23 +78,20 @@ header {
 }
 
 #hero {
-  // background-color: $header-color;
-  padding: 100px 0 0 0;
-  margin-bottom: 250px;
   text-align: center;
 
   h1 {
+    font-size: 2.5em;
     font-weight: lighter;
-    margin: 0 auto;
-    font-size: 1.9em;
+    margin: 100px auto 0 auto;
   }
 
   h2 {
     font-family: "Roboto";
+    font-size: 1.3em;
     font-weight: lighter;
-    width: 80%;
-    margin: 25px auto;
-    font-size: 1.1em;
+    margin: 30px auto;
+    width: 70%;
   }
 
   .install-button {
@@ -82,27 +100,67 @@ header {
 
     a {
       border-radius: 25px;
+      color: $foreground-color;
       height: 50px;
       letter-spacing: 3px;
       line-height: 50px;
+
+      &:hover, &:active {
+        color: black;
+      }
     }
   }
 
   img {
-    margin-bottom: -200px;
-    width: 90%;
     box-shadow: 0 0 10px black;
+    width: 90%;
   }
 }
 
 .install-button {
   a {
-    text-align: center;
+    background-color: $sublime-orange;
     box-shadow: 0 0 8px $sublime-orange;
     display: block;
     font-weight: 600;
-    background-color: $sublime-orange;
-    color: $foreground-color;
+    text-align: center;
   }
 }
 
+h1 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.5em;
+  margin: 50px auto 30px auto;
+}
+
+#install {
+  .install-boxes {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &> div {
+      padding: 15px;
+      text-align: center;
+      width: 300px;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 140px;
+      }
+
+      code {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
