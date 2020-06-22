@@ -24,9 +24,11 @@ a {
 }
 
 .content {
+  background: $background-color;
+  box-shadow: 0 3px 5px black;
+  padding: 100px 0 0 0;
   position: relative;
   z-index: 2;
-  background: $background-color;
 }
 
 .content-wrapper {
@@ -40,7 +42,7 @@ $header-height: 90px;
 header {
   z-index: 3;
   background: $header-color;
-  box-shadow: 0px 1px 10px darken($header-color, 20%);
+  box-shadow: 0 3px 5px darken($header-color, 20%);
   max-height: $header-height;
   position: sticky;
   top: 0;
@@ -92,7 +94,7 @@ header {
   h1 {
     font-size: 2.5em;
     font-weight: lighter;
-    margin: 100px auto 0 auto;
+    margin: 0 auto;
   }
 
   h2 {
@@ -137,10 +139,10 @@ header {
 }
 
 h1 {
-  text-align: center;
-  font-weight: normal;
   font-size: 1.5em;
+  font-weight: lighter;
   margin: 50px auto 30px auto;
+  text-align: center;
 }
 
 #install {
@@ -149,6 +151,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 50px;
 
     &> div {
       padding: 15px;
@@ -179,8 +182,9 @@ h1 {
       }
 
       pre {
-        color: $background-color;
         background-color: $foreground-color;
+        color: $background-color;
+        margin: 0;
         padding: 10px;
       }
     }
@@ -189,17 +193,17 @@ h1 {
 
 footer {
   background: lighten($foreground-color, 5%);
-  color: darken($background-color, 30%);
-  position: fixed;
   bottom: 0;
-  z-index: 1;
-  text-align: center;
+  color: darken($background-color, 30%);
   height: $footer-height;
+  position: fixed;
+  text-align: center;
   width: 100%;
+  z-index: 1;
 
   .social-media {
-    margin-top: 20px;
     font-size: 1.5em;
+    margin-top: 20px;
 
     a {
       color: darken($background-color, 30%);
@@ -212,6 +216,6 @@ footer {
 
   p {
     margin: 8px 0;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 }
