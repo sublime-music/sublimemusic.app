@@ -1,0 +1,97 @@
+$foreground-color: #010101;
+$background-color: #eeeeee;
+$header-color: #2980b9;
+$sublime-orange: #ff6801;
+
+body {
+  background-color: $background-color;
+  padding: 0;
+  margin: 0;
+  color: $foreground-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 20px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: $header-color;
+  box-shadow: 0px 1px 10px darken($header-color, 20%);
+  max-height: 90px;
+
+  .logo {
+    margin: 17px 0 18px 0;
+    max-height: 50px;
+  }
+
+  nav {
+    float: right;
+
+    ul {
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+#hero {
+  // background-color: $header-color;
+  padding: 100px 0 0 0;
+  margin-bottom: 250px;
+  text-align: center;
+
+  h1 {
+    font-family: "Open Sans";
+    font-weight: lighter;
+    margin: 0 auto;
+    font-size: 1.9em;
+  }
+
+  h2 {
+    font-family: "Roboto";
+    font-weight: lighter;
+    width: 80%;
+    margin: 25px auto;
+    font-size: 1.1em;
+  }
+
+  .install-button {
+    margin: 50px auto;
+    width: 170px;
+
+    a {
+      border-radius: 25px;
+      height: 50px;
+      letter-spacing: 3px;
+      line-height: 50px;
+    }
+  }
+
+  img {
+    margin-bottom: -200px;
+    width: 80%;
+    box-shadow: 0 0 10px black;
+  }
+}
+
+.install-button {
+  a {
+    text-align: center;
+    box-shadow: 0 0 8px $sublime-orange;
+    display: block;
+    font-family: "Open Sans";
+    font-weight: 600;
+    background-color: $sublime-orange;
+    color: $foreground-color;
+  }
+}
+
