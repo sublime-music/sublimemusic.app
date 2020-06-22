@@ -1,5 +1,5 @@
 $foreground-color: #1c1a19;
-$background-color: #dadada;
+$background-color: #eaeaea;
 $header-color: #2980b9;
 $sublime-orange: #ff6801;
 
@@ -140,7 +140,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 50px;
 
     &> div {
       padding: 15px;
@@ -153,14 +152,33 @@ h1 {
         width: 140px;
       }
 
+      .install-instructions-container {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        margin: 10px 0;
+
+        p {
+          width: 100%;
+        }
+      }
+
       code {
         font-size: 1.3em;
         letter-spacing: 1px;
+      }
+
+      pre {
+        color: $background-color;
+        background-color: $foreground-color;
+        padding: 10px;
       }
     }
   }
 }
 
 footer {
+  margin-top: 50px;
   text-align: center;
 }
