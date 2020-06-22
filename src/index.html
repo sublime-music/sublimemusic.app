@@ -50,7 +50,7 @@
 
 <body>
   <header>
-    <div class="content">
+    <div class="content-wrapper">
       <img class="logo" src="images/sublime-music.png" alt="Sublime Music" />
 
       <nav>
@@ -70,64 +70,71 @@
       </nav>
     </div>
   </header>
-  <div id="hero">
-    <div class="content">
-      <h1>The most beautiful Subsonic client.</h1>
-      <h2>Sublime Music is a feature-packed native GTK client for Subsonic-compatible servers.</h2>
-      <div class="install-button">
-        <a href="#install">INSTALL</a>
+  <div class="content">
+    <div id="hero">
+      <div class="content-wrapper">
+        <h1>The most beautiful Subsonic client.</h1>
+        <h2>Sublime Music is a feature-packed native GTK client for Subsonic-compatible servers.</h2>
+        <div class="install-button">
+          <a href="#install">INSTALL</a>
+        </div>
+        <img class="hero-image" src="images/albums-tab.png" alt="Albums tab of Sublime Music" />
+        <!-- <p><a href="screenshots.html">View more screenshots.</a></p> -->
       </div>
-      <img class="hero-image" src="images/albums-tab.png" alt="Albums tab of Sublime Music" />
-      <!-- <p><a href="screenshots.html">View more screenshots.</a></p> -->
     </div>
-  </div>
-  <div id="features">
-    <div class="content">
-      <h1>FEATURES</h1>
+    <div id="features">
+      <div class="content-wrapper">
+        <h1>FEATURES</h1>
+      </div>
     </div>
-  </div>
-  <div id="install">
-    <div class="content">
-      <h1>INSTALL</h1>
+    <div id="install">
+      <div class="content-wrapper">
+        <h1>INSTALL</h1>
 
-      <div class="install-boxes">
-        <!-- Arch Linux -->
-        <div>
-          <img src="images/arch-linux.png" alt="Arch Linux logo" />
-          <div class="install-instructions-container">
-            <p>Install <code>sublime-music</code> from the AUR.</p>
+        <div class="install-boxes">
+          <!-- Arch Linux -->
+          <div>
+            <img src="images/arch-linux.png" alt="Arch Linux logo" />
+            <div class="install-instructions-container">
+              <p>Install <code>sublime-music</code> from the AUR.</p>
+            </div>
+            <pre>yay -S sublime-music</pre>
           </div>
-          <pre>yay -S sublime-music</pre>
-        </div>
 
-        <!-- Debian -->
-        <div>
-          <img src="images/debian.png" alt="Debian logo" />
-          <div class="install-instructions-container">
-            <p>
-              Install <code>sublime-music</code> from
-              <a href="https://wiki.debian.org/DebianTesting">Debian Testing</a>.
-            </p>
+          <!-- Debian -->
+          <div>
+            <img src="images/debian.png" alt="Debian logo" />
+            <div class="install-instructions-container">
+              <p>
+                Install <code>sublime-music</code> from
+                <a href="https://wiki.debian.org/DebianTesting">Debian Testing</a>.
+              </p>
+            </div>
+            <pre>apt install sublime-music</pre>
           </div>
-          <pre>apt install sublime-music</pre>
-        </div>
 
-        <!-- Flatpak -->
-        <div>
-          <img src="images/flatpak.png" alt="Flatpak logo" />
-          <div class="install-instructions-container">
-            <p>
-              Download the Flatpak from
-              <a href="https://gitlab.com/sublime-music/sublime-music/-/releases">Releases</a>.
-            </p>
+          <!-- Flatpak -->
+          <div>
+            <img src="images/flatpak.png" alt="Flatpak logo" />
+            <div class="install-instructions-container">
+              <p>
+                Download the Flatpak from
+                <a href="https://gitlab.com/sublime-music/sublime-music/-/releases">Releases</a>.
+              </p>
+            </div>
+            <pre>flatpak install sublime-music.flatpak</pre>
           </div>
-          <pre>flatpak install sublime-music.flatpak</pre>
         </div>
       </div>
     </div>
   </div>
   <footer>
-    <p>&copy; 2020 Sumner Evans</p>
+    <div class="social-media">
+      <a href="https://gitlab.com/sublime-music/sublime-music" class="fa fa-gitlab"></a>
+    </div>
+    <p>
+      Copyright &copy; 2020 Sumner Evans.
+    </p>
   </footer>
 </body>
 

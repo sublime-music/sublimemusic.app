@@ -12,7 +12,7 @@ public/images: | public
 	mkdir -p public/images
 
 public/%.html: src/index.html | public
-	htmlmin -s $< $@
+	htmlmin -cs $< $@
 
 public/styles.css: src/styles.scss | public
 	sass src/styles.scss public/styles.css

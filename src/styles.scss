@@ -3,11 +3,13 @@ $background-color: #eaeaea;
 $header-color: #2980b9;
 $sublime-orange: #ff6801;
 
+$footer-height: 100px;
+
 body {
   background-color: $background-color;
   color: $foreground-color;
   font-family: "Open Sans";
-  margin: 0;
+  margin: 0 0 $footer-height 0;
   padding: 0;
 }
 
@@ -22,6 +24,12 @@ a {
 }
 
 .content {
+  position: relative;
+  z-index: 2;
+  background: $background-color;
+}
+
+.content-wrapper {
   margin: 0 auto;
   max-width: 1024px;
   padding: 0 20px;
@@ -30,6 +38,7 @@ a {
 $header-height: 90px;
 
 header {
+  z-index: 3;
   background: $header-color;
   box-shadow: 0px 1px 10px darken($header-color, 20%);
   max-height: $header-height;
@@ -179,6 +188,30 @@ h1 {
 }
 
 footer {
-  margin-top: 50px;
+  background: lighten($foreground-color, 5%);
+  color: darken($background-color, 30%);
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
   text-align: center;
+  height: $footer-height;
+  width: 100%;
+
+  .social-media {
+    margin-top: 20px;
+    font-size: 1.5em;
+
+    a {
+      color: darken($background-color, 30%);
+
+      &:hover, &:active {
+        color: white;
+      }
+    }
+  }
+
+  p {
+    margin: 8px 0;
+    font-size: 0.8em;
+  }
 }
