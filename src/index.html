@@ -80,23 +80,34 @@
       <div class="content-wrapper">
         <h1>FEATURES</h1>
 
+        <!--
+          * Offline Cache
+          * Offline Mode
+          * Native
+          * MPRIS
+        -->
+
         <div class="big-feature">
-          <img src="images/albums-tab.png" />
+          <img src="images/offline.png" />
           <div>
-            <h3>Albums Tab</h3>
+            <h3>Download Songs for Offline Listening</h3>
             <p>
-              Lorem ipsum
+              Sublime Music allows you to download your songs for offline listening.
             </p>
           </div>
         </div>
 
         <div class="big-feature right">
           <div>
-            <h3>Albums Tab</h3>
+            <h3>Desktop Integration</h3>
             <p>
-              Lorem ipsum
+              Sublime Music integrates seamlessly with your desktop environment via an MPRIS
+              interface.
+              Control Sublime Music using <code>playerctl</code>,
+              <code>i3status-rust</code>, KDE Connect, and many commonly used desktop environments.
             </p>
           </div>
+          <!-- TODO picture of elementary OS player control with Sublime Music -->
           <img src="images/albums-tab.png" />
         </div>
       </div>
@@ -150,6 +161,23 @@
       Copyright &copy; 2020 Sumner Evans.
     </p>
   </footer>
+
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//matomo.sumnerevans.com/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="//matomo.sumnerevans.com/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Matomo Code -->
+
 </body>
 
 </html>
