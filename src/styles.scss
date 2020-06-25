@@ -274,6 +274,7 @@ footer {
 
     a {
       color: darken($background-color, 30%);
+      letter-spacing: 20px;
 
       &:hover, &:active {
         color: white;
