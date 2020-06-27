@@ -186,12 +186,13 @@ header {
 h1 {
   font-size: 1.8em;
   font-weight: lighter;
-  margin: 80px auto 50px auto;
+  margin: 70px auto 50px auto;
   text-align: center;
   letter-spacing: 2px;
 }
 
 #features {
+  // TODO remove
   .big-feature {
     display: flex;
     margin-bottom: 40px;
@@ -242,6 +243,13 @@ h1 {
 
       > i {
         font-size: 4em;
+        display: block;
+      }
+
+      > img {
+        display: block;
+        height: 4em;
+        margin: 0 auto;
       }
 
       h3 {
