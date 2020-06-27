@@ -54,7 +54,10 @@
       <img class="logo" src="images/sublime-music.png" alt="Sublime Music" />
 
       <nav>
-        <a href="#features">FEATURES</a>
+        <div class="links">
+          <a href="#features">FEATURES</a>
+          <a href="https://sublime-music.gitlab.io/sublime-music">DOCS</a>
+        </div>
         <div class="install-button">
           <a href="#install">INSTALL</a>
         </div>
@@ -85,20 +88,22 @@
           * Offline Mode
           * Native
           * MPRIS
+          * Community
+          * Support
         -->
 
-        <div class="big-feature">
-          <img src="images/offline.png" />
+        <div class="features-list">
           <div>
-            <h3>Download Songs for Offline Listening</h3>
+            <i class="fa fa-cloud-download"></i>
+            <h3>Offline Support</h3>
             <p>
-              Sublime Music allows you to download your songs for offline listening.
+              Sublime Music allows you to download your songs for offline listening. You can also
+              force Sublime Music into <i>Offline Mode</i> to prevent it from making any network
+              requests which may be useful if you are on a metered connection.
             </p>
           </div>
-        </div>
-
-        <div class="big-feature right">
           <div>
+            <i class="fa fa-desktop"></i>
             <h3>Desktop Integration</h3>
             <p>
               Sublime Music integrates seamlessly with your desktop environment via an MPRIS
@@ -107,8 +112,23 @@
               <code>i3status-rust</code>, KDE Connect, and many commonly used desktop environments.
             </p>
           </div>
-          <!-- TODO picture of elementary OS player control with Sublime Music -->
-          <img src="images/albums-tab.png" />
+          <div>
+            <i class="fa fa-linux"></i>
+            <h3>Linux Native</h3>
+            <p>
+              Sublime Music uses the GTK toolkit, so it looks right at home on your Linux desktop.
+              All of the core functionality of Sublime Music also works on macOS.
+            </p>
+          </div>
+          <div>
+            <i class="fa fa-users"></i>
+            <h3>Friendly Community</h3>
+            <p>
+              Sublime Music has a very friendly and responsive community. Join our
+              <a href="https://matrix.to/#/!veTDkgvBExJGKIBYlU:matrix.org?via=matrix.org">Matrix chat</a>
+              to talk to other users and developers.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -150,6 +170,10 @@
             <pre>flatpak install sublime-music.flatpak</pre>
           </div>
         </div>
+        <p class="install-details">
+          For more detailed instructions on how to install Sublime Music, see the
+          <a href="https://sublime-music.gitlab.io/sublime-music/index.html#installation">Documentation</a>.
+        </p>
       </div>
     </div>
   </div>
