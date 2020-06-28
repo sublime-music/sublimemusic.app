@@ -1,0 +1,3 @@
+[submodule "src/slick"]
+	path = src/slick
+	url = https://github.com/kenwheeler/slick.git

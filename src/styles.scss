@@ -5,6 +5,14 @@ $sublime-orange: #ff6801;
 
 $footer-height: 100px;
 
+$slick-font-path: "./slick/fonts/";
+$slick-loader-path: "./slick";
+$slick-arrow-color: $foreground-color;
+$slick-dot-size: 10px;
+
+@import "slick/slick/slick.scss";
+@import "slick/slick/slick-theme.scss";
+
 body {
   background-color: $foreground-color;
   color: $foreground-color;
@@ -167,9 +175,60 @@ header {
     }
   }
 
-  img {
-    box-shadow: 0 0 10px black;
+  .hidden {
+    display: none;
+  }
+
+  #screenshot-slideshow {
+    margin: 0 auto;
     width: 90%;
+
+    img {
+      width: calc(100% - 20px);
+      margin: 10px;
+      box-shadow: 0 0 10px black;
+    }
+  }
+
+  #screenshot-slideshow-nav {
+    margin: 0 auto;
+    width: calc(90% - 20px);
+
+    .slick-slide {
+      padding: 0 4px;
+
+      &.slick-current img {
+        opacity: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      opacity: 80%;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+
+      &:hover, &:active {
+        opacity: 100%;
+      }
+    }
+  }
+
+  .slick-prev, .slick-next {
+    height: 30px;
+    width: 30px;
+
+    &.slick-prev {
+      left: -30px;
+    }
+
+    &.slick-next {
+      right: -30px;
+    }
+
+    &::before {
+      font-size: 30px;
+    }
   }
 }
 

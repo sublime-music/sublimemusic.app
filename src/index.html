@@ -51,7 +51,9 @@
 <body>
   <header>
     <div class="content-wrapper">
-      <img class="logo" src="images/sublime-music.png" alt="Sublime Music" />
+      <a href="/">
+        <img class="logo" src="images/sublime-music.png" alt="Sublime Music" />
+      </a>
 
       <nav>
         <div class="links">
@@ -75,22 +77,67 @@
         <div class="install-button">
           <a href="#install">INSTALL</a>
         </div>
-        <img class="hero-image" src="images/albums-tab.png" alt="Albums tab of Sublime Music" />
-        <!-- <p><a href="screenshots.html">View more screenshots.</a></p> -->
+        <noscript>
+          <p>Screenshot slideshow is best viewed with JavaScript enabled.</p>
+        </noscript>
+        <div id="screenshot-slideshow">
+          <div>
+            <img src="images/screenshots/albums.png" alt="Albums tab of Sublime Music" />
+            <!-- <p>Albums Tab</p> -->
+          </div>
+          <div>
+            <img src="images/screenshots/artists.png" alt="Artists tab of Sublime Music" />
+            <!-- <p>Artists Tab</p> -->
+          </div>
+          <div>
+            <img src="images/screenshots/browse.png" alt="Browse tab of Sublime Music" />
+            <!-- <p>Browse Tab</p> -->
+          </div>
+          <div>
+            <img src="images/screenshots/playlists.png" alt="Playlists tab of Sublime Music" />
+            <!-- <p>Playlists Tab</p> -->
+          </div>
+          <div>
+            <img src="images/screenshots/play-queue.png" alt="Sublime Music with the Play Queue popup open" />
+            <!-- <p>Playlists Tab</p> -->
+          </div>
+          <div>
+            <img src="images/screenshots/chromecasts.png" alt="Sublime Music with the Chromecast popup open" />
+            <!-- <p>Playlists Tab</p> -->
+          </div>
+          <div>
+            <img src="images/screenshots/search.png" alt="The search functionality of Sublime Music" />
+            <!-- <p>Playlists Tab</p> -->
+          </div>
+        </div>
+        <div id="screenshot-slideshow-nav" class="hidden">
+          <div>
+            <img src="images/screenshots/albums.png" alt="Albums tab of Sublime Music" />
+          </div>
+          <div>
+            <img src="images/screenshots/artists.png" alt="Artists tab of Sublime Music" />
+          </div>
+          <div>
+            <img src="images/screenshots/browse.png" alt="Browse tab of Sublime Music" />
+          </div>
+          <div>
+            <img src="images/screenshots/playlists.png" alt="Playlists tab of Sublime Music" />
+          </div>
+          <div>
+            <img src="images/screenshots/play-queue.png" alt="Sublime Music with the Play Queue popup open" />
+          </div>
+          <div>
+            <img src="images/screenshots/chromecasts.png" alt="Sublime Music with the Chromecast popup open" />
+          </div>
+          <div>
+            <img src="images/screenshots/search.png" alt="The search functionality of Sublime Music" />
+          </div>
+        </div>
       </div>
     </div>
     <div id="features">
       <div class="content-wrapper">
         <h1>Features</h1>
-
-        <!--
-          * Offline Cache
-          * Offline Mode
-          * Native
-          * MPRIS
-          * Community
-          * Support
-        -->
 
         <div class="features-list">
           <div>
@@ -116,7 +163,7 @@
             <h3>Desktop Integration</h3>
             <p>
               Control Sublime Music using <code>playerctl</code>, KDE Connect, and many commonly
-              used desktop environments. Sublime Music exposes an common MPRIS interface which works
+              used desktop environments. Sublime Music exposes a common MPRIS interface which works
               with many clients.
             </p>
           </div>
@@ -219,6 +266,12 @@
   </script>
   <noscript><p><img src="//matomo.sumnerevans.com/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
   <!-- End Matomo Code -->
+
+  <!-- Slick -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 
 </body>
 
