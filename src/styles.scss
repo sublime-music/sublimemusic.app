@@ -3,6 +3,7 @@ $background-color: #eaeaea;
 $header-color: #2980b9;
 $sublime-orange: #ff6801;
 
+$header-height: 90px;
 $footer-height: 100px;
 
 $slick-font-path: "./slick/fonts/";
@@ -29,6 +30,15 @@ a {
   &:hover, &:active {
     color: darken($header-color, 9%);
   }
+
+  &.nav-link {
+    position: relative;
+    top: -25px;
+
+    @media only screen and (max-width: 580px) {
+      top: -80px;
+    }
+  }
 }
 
 .content {
@@ -44,8 +54,6 @@ a {
   max-width: 1024px;
   padding: 0 20px;
 }
-
-$header-height: 90px;
 
 header {
   z-index: 3;
@@ -260,45 +268,7 @@ h1 {
   letter-spacing: 2px;
 }
 
-#features {
-  // TODO remove
-  .big-feature {
-    display: flex;
-    margin-bottom: 40px;
-
-    &.right {
-      justify-content: space-between;
-
-      div {
-        padding-left: 0;
-        padding-right: 20px;
-      }
-    }
-
-    img {
-      width: 55%;
-      height: 55%;
-    }
-
-    div {
-      width: 45%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 20px;
-
-      h3 {
-        margin: 0;
-        font-size: 1.5em;
-        font-weight: lighter;
-      }
-
-      p {
-        font-family: "Roboto";
-      }
-    }
-  }
-
+.features-container {
   .features-list {
     align-items: flex-start;
     display: flex;
@@ -330,7 +300,7 @@ h1 {
   }
 }
 
-#install {
+.install-container {
   .install-boxes {
     align-items: flex-start;
     display: flex;
