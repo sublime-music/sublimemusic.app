@@ -1,11 +1,13 @@
 HTMLFILES=$(wildcard src/*.html)
 IMGFILES=$(wildcard src/images/*)
 SLICKFILES=$(wildcard src/slick/slick/*)
+FAVICONFILES=$(wildcard src/favicon_resources/*)
 BUILTHTMLFILES=$(patsubst src/%.html,public/%.html,$(HTMLFILES))
 BUILTIMGFILES=$(patsubst src/images/%,public/images/%,$(IMGFILES))
 BUILTSLICKFILES=$(patsubst src/slick/slick/%,public/slick/%,$(SLICKFILES))
+BUILTFAVICONFILES=$(patsubst src/favicon_resources/%,public/%,$(FAVICONFILES))
 
-all: $(BUILTHTMLFILES) $(BUILTIMGFILES) $(BUILTSLICKFILES) public/styles.css public/script.js
+all: $(BUILTHTMLFILES) $(BUILTIMGFILES) $(BUILTSLICKFILES) $(BUILTFAVICONFILES) public/styles.css public/script.js
 
 public:
 	mkdir -p public
@@ -47,7 +49,7 @@ public/slick/%: src/slick/slick/% | public/slick
 public/images/%: src/images/% | public/images
 	cp -r $< $@
 
-public/favicon: src/images/% | public/images
+public/%: src/favicon_resources/% | public
 	cp $< $@
 
 clean:
