@@ -1,0 +1,17 @@
+image: nixos/unstable
+sources:
+  - https://git.sr.ht/~sumner/sublimemusic.app
+environment:
+  REPO_NAME: sublimemusic.app
+# triggers:
+#   - action: email
+#     condition: failure
+#     to: ~sumner/sublime-music-devel@lists.sr.ht
+tasks:
+  - setup: |
+      echo "cd $REPO_NAME" >> ~/.buildenv
+
+  - build: |
+      nix-shell --run make
+
+  # TODO: need to deploy
