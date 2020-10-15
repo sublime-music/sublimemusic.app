@@ -1,4 +1,4 @@
-image: node:latest
+image: nixos/nix:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -9,9 +9,10 @@ pages:
     - master
   stage: deploy
   before_script:
-    - npm install -g sass uglify-js html-minifier
+    - nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+    - nix-channel --update
   script:
-    - make
+    - nix-shell --run make
   artifacts:
     paths:
       - public
