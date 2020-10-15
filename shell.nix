@@ -4,7 +4,7 @@ pkgs.mkShell {
     gnumake
     nodePackages.html-minifier
     nodePackages.uglify-js
+    rnix-lsp
     sass
   ];
 }
-
