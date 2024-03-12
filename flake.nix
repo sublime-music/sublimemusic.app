@@ -6,23 +6,18 @@
   };
 
   outputs = { self, nixpkgs, flake-utils }:
-    (flake-utils.lib.eachDefaultSystem
-      (system:
-        let
-          pkgs = import nixpkgs { system = system; };
-        in
-        rec {
-          devShells = {
-            default = pkgs.mkShell {
-              packages = with pkgs; [
-                gnumake
-                nodePackages.html-minifier
-                nodePackages.uglify-js
-                sass
-                rnix-lsp
-              ];
-            };
+    (flake-utils.lib.eachDefaultSystem (system:
+      let pkgs = import nixpkgs { system = system; };
+      in {
+        devShells = {
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              gnumake
+              nodePackages.html-minifier
+              nodePackages.uglify-js
+              sass
+            ];
           };
-        }
-      ));
+        };
+      }));
 }
