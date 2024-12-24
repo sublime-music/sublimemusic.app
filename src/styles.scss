@@ -46,7 +46,7 @@ a {
 .content {
   background: $background-color;
   box-shadow: 0 3px 5px black;
-  padding: 100px 0 0 0;
+  padding: 70px 0 0 0;
   position: relative;
   z-index: 2;
 }
@@ -151,12 +151,25 @@ header {
   }
 }
 
+#eom-notice {
+  text-align: center;
+  margin: 0 auto 50px auto;
+  border: 2px solid red;
+  background-color: #e8999e;
+  border-radius: 1rem;
+  max-width: 500px;
+  padding: 1rem;
+
+  h1 {
+    font-size: 1.4em;
+  }
+}
+
 #hero {
   text-align: center;
 
   h1 {
     font-size: 3em;
-    font-weight: lighter;
     margin: 0 auto;
   }
 
